@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xpedia.com - Booking</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+  <div class="container mt-4">
+    <div class="card">
+      <div class="card-header">
+        <h5>Booking Details</h5>
+      </div>
+      <div class="card-body">
+        <div id="bookingnotifications" class="mb-3"></div>
+        <p><strong>Airline:</strong> <span id="bookingairline"></span></p>
+        <p><strong>Flight:</strong> <span id="bookingflight"></span></p>
+        <p><strong>Departure:</strong> <span id="bookingdeparture"></span></p>
+        <p><strong>Arrival:</strong> <span id="bookingarrival"></span></p>
+        <p><strong>Price:</strong> <span id="bookingprice"></span></p>
+      </div>
+      <div class="card-footer">
+        <button type="button" id="confirmbooking" class="btn btn-success btn-sm">
+          <i class="fas fa-check"></i> Confirm Booking
+        </button>
+        <button type="button" class="btn btn-outline-danger btn-sm" onclick="window.history.back()">
+          <i class="fas fa-times"></i> Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery3.71.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

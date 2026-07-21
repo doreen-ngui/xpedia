@@ -11,6 +11,14 @@
         echo json_encode($response);
     }
 
+     if(isset($_GET['filtercity'])){
+        $countryid=isset($_GET['CountryID'])?$_GET['CountryID']:0;
+
+       
+        echo $city->getcity($CountryID);
+    }
+
+    
     if(isset($_GET['getcity'])){
         echo $city->getcity();
     }

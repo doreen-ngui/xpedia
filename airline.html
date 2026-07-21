@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xpedia.com - Airlines</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <div class="container-fluid mt-2">
+        <div class="card">
+            <div class="card-header"><h5>Filter Options</h5></div>
+            <div class="card-body">
+                <div id="filterairlinenotifications"></div>
+                <div class="row">
+                    <div class="col form-group">
+                        <label for="filterairlinename">Airline Name</label>
+                        <input type="text" id="filterairlinename" class="form-control form-control-sm">
+                    </div>
+                    <div class="col form-group">
+                        <label for="filterairlinecountry">Country</label>
+                        <div class='input-group'>
+                            <select id="filterairlinecountry" class="form-control form-control-sm"></select>
+                            <div class='input-group-append'>
+                                <button class="btn btn-success btn-sm" id="searchairlines"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-sm table-striped">
+                    <thead>
+                        <th>#</th><th>Logo</th><th>Airline Name</th><th>Country</th><th>&nbsp;</th>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <button id="addnewairline" class="btn btn-sm btn-success"><i class="fas fa-plus"></i> Add New Airline</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="airlinedetailsmodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Airline Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div id="airlinedetailsnotifications" class="mb-4"></div>
+                <input type="hidden" id="airlineid" value="0">
+                <div class="form-group">
+                    <label for="airlinedetailsname">Airline Name</label>
+                    <input type="text" id="airlinedetailsname" class="form-control form-control-sm">
+                </div>
+                <div class="form-group">
+                    <label for="airlinedetailslogo">Logo URL</label>
+                    <input type="text" id="airlinedetailslogo" class="form-control form-control-sm">
+                </div>
+                <div class="form-group">
+                    <label for="airlinedetailscountry">Country</label>
+                    <select id="airlinedetailscountry" class="form-control form-control-sm"></select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success btn-sm" id="saveairline"><i class="fas fa-save fa-lg"></i> Save changes</button>
+                <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal"><i class="fas fa-times fa-lg"></i> Close</button>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery3.71.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/airline.js"></script>
+</html>

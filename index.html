@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in · MyXpedia</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="auth-shell">
+    <div class="card auth-card">
+      <h1>&#9992; MyXpedia</h1>
+      <p class="page-subtitle">Sign in to manage flights and bookings</p>
+      <div id="alertBox" class="alert" style="display:none;"></div>
+      <form id="loginForm">
+        <div class="form-grid" style="grid-template-columns:1fr;">
+          <div class="field">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required placeholder="admin">
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required placeholder="&bull;&bull;&bull;&bull;&bull;&bull;">
+          </div>
+        </div>
+        <div class="form-actions" style="justify-content:center;">
+          <button type="submit" class="btn" style="width:100%;justify-content:center;">Sign in</button>
+        </div>
+      </form>
+      <p class="page-subtitle" style="margin-top:16px;">Enter any username/password to sign in.</p>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

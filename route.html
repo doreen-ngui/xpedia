@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xpedia.com - Routes</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <div class="container-fluid mt-2">
+        <div class="card">
+            <div class="card-header"><h5>Filter Options</h5></div>
+            <div class="card-body">
+                <div id="filterroutenotifications"></div>
+                <div class="row">
+                    <div class="col form-group">
+                        <label for="filterroutename">Route Name</label>
+                        <div class='input-group'>
+                            <input type="text" id="filterroutename" class="form-control form-control-sm">
+                            <div class='input-group-append'>
+                                <button class="btn btn-success btn-sm" id="searchroutes"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-sm table-striped">
+                    <thead>
+                        <th>#</th><th>Route Name</th><th>Origin</th><th>Destination</th><th>Distance (km)</th><th>Duration</th><th>&nbsp;</th>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <button id="addnewroute" class="btn btn-sm btn-success"><i class="fas fa-plus"></i> Add New Route</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="routedetailsmodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Route Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div id="routedetailsnotifications" class="mb-4"></div>
+                <input type="hidden" id="routeid" value="0">
+                <div class="form-group">
+                    <label for="routedetailsname">Route Name</label>
+                    <input type="text" id="routedetailsname" class="form-control form-control-sm">
+                </div>
+                <div class="form-group">
+                    <label for="routedetailsorigin">Origin Airport</label>
+                    <select id="routedetailsorigin" class="form-control form-control-sm"></select>
+                </div>
+                <div class="form-group">
+                    <label for="routedetailsdestination">Destination Airport</label>
+                    <select id="routedetailsdestination" class="form-control form-control-sm"></select>
+                </div>
+                <div class="form-group">
+                    <label for="routedetailsdistance">Distance (km)</label>
+                    <input type="number" step="0.01" id="routedetailsdistance" class="form-control form-control-sm">
+                </div>
+                <div class="form-group">
+                    <label for="routedetailsduration">Estimated Duration (hh:mm:ss)</label>
+                    <input type="text" id="routedetailsduration" placeholder="04:16:30" class="form-control form-control-sm">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success btn-sm" id="saveroute"><i class="fas fa-save fa-lg"></i> Save changes</button>
+                <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal"><i class="fas fa-times fa-lg"></i> Close</button>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery3.71.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/route.js"></script>
+</html>

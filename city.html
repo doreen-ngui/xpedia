@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xpedia.com - Cities</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <div class="container-fluid mt-2">
+        <div class="card" >
+            <div class="card-header">
+                <h5>Filter Options</h5>
+            </div>
+            <div class="card-body">
+                <div id="filtercitynotifications"></div>
+                <div class="row">
+                    <div class="col form-group">
+                        <label for="filtercountry">Country</label>
+                        <select name="filtercountry" id="filtercountry" class="form-control form-control-sm"></select>
+                    </div>
+
+                    <div class="col form-group">
+                        <label for="filtercityname">City Name</label>
+                        <div class='input-group'>
+                            <input type="text" name="filtercityname" id="filtercityname" class="form-control form-control-sm">
+                            <div class='input-group-append'>
+                                <button class="btn btn-success btn-sm" id="searchcities">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <table class="table table-sm table-striped">
+                    <thead>
+                        <th>#</th>
+                        <th>Country</th>
+                        <th>City Name </th>
+                        <th>Airports</th>
+                        <th>Airlines</th>
+                        <th>&nbsp;</th><!-- Edit button goes here -->
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <button id="addnewcity" class="btn btn-sm btn-success"><i class="fas fa-plus"></i> Add New City</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for city details -->
+    <div class="modal" tabindex="-1" id="citydetailsmodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">City Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="citydetailsnotifications" class="mb-4"></div>
+                <input type="hidden" name="cityid" id="cityid" value="0">
+                <div class="form-group">
+                    <label for="citydetailscountry">Country</label>
+                    <select name="citydetailscountry" id="citydetailscountry" class="form-control form-control-sm"></select>
+                </div>
+                <div class="form-group">
+                    <label for="citydetailscityname">City Name</label>
+                    <input type="text" name="citydetailscityname" id="citydetailscityname" class="form-control form-control-sm">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success btn-sm" id="savecity"><i class="fas fa-save fa-lg"></i> Save changes</button>
+                <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal"><i class="fas fa-times fa-lg"></i> Close</button>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery3.71.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/city.js"></script>
+</html>

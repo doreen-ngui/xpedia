@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xpedia.com - Booking Types</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <div class="container-fluid mt-2">
+        <div class="card">
+            <div class="card-header"><h5>Filter Options</h5></div>
+            <div class="card-body">
+                <div id="filterbookingtypenotifications"></div>
+                <div class="row">
+                    <div class="col form-group">
+                        <label for="filterbookingtypename">Booking Type Name</label>
+                        <div class='input-group'>
+                            <input type="text" id="filterbookingtypename" class="form-control form-control-sm">
+                            <div class='input-group-append'>
+                                <button class="btn btn-success btn-sm" id="searchbookingtypes"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-sm table-striped">
+                    <thead><th>#</th><th>Booking Type Name</th><th>&nbsp;</th></thead>
+                    <tbody>
+                        <div id="bookingtypedetailsnotifications" class="mb-4"></div>
+                <input type="hidden" id="bookingtypeid" value="0">
+                <div class="form-group">
+                    <label for="bookingtypedetailsname">Booking Type Name</label>
+                    <input type="text" id="bookingtypedetailsname" class="form-control form-control-sm">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success btn-sm" id="savebookingtype"><i class="fas fa-save fa-lg"></i> Save changes</button>
+                <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal"><i class="fas fa-times fa-lg"></i> Close</button>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery3.71.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/bookingtype.js"></script>
+</html>
